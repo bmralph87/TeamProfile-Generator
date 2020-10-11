@@ -10,9 +10,10 @@ inquirer.prompt([
         message: 'What is your name?',
     },
     {
-        type: 'input',
+        type: 'checkbox',
         name: 'role',
-        message: 'What is your role?',
+        message: 'What is your role? (Check one)',
+        choices: ['Manager', 'Engineer', 'Intern']
     },
     {
         type: 'input',
@@ -26,12 +27,12 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'contact',
-        message: 'What is your contact?',
+        name: 'officeNumber',
+        message: 'What is your office number?',
     },  
     {
         type: 'input',
-        name: 'username',
+        name: 'github',
         message: 'What is your github username?',
     }, 
      {
