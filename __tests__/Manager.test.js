@@ -11,8 +11,7 @@ test('confirms manager info is correct', () => {
     expect(MyManager.getId()).toEqual('id');
     expect(MyManager.getOfficeNumber()).toEqual('officeNumber');
 }
-    // expect(manager.extension).toEqual(
-    //     expect.arrayContaining([expect.any(Object)])
+
 );
 
 

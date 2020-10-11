@@ -11,6 +11,5 @@ test('confirms intern info is correct', () => {
     expect(MyIntern.getId()).toEqual('id');
     expect(MyIntern.getSchool()).toBe('school');
 }
-    // expect(manager.extension).toEqual(
-    //     expect.arrayContaining([expect.any(Object)])
+    
 );

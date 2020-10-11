@@ -1,11 +1,10 @@
 const Employee = require('../lib/Employee');
 
-// console.log(new Employee());
 
 
 test.only('creates an employee object', () => {
     const MyEmployee = new Employee('employee name', 'employee email', 'employee id');
-    // console.log(MyEmployee);
+    
 
     expect(MyEmployee.getName()).toBe('employee name');
     expect(MyEmployee.getRole()).toBe('Employee');

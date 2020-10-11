@@ -10,12 +10,6 @@ inquirer.prompt([
         message: 'What is your name?',
     },
     {
-        type: 'checkbox',
-        name: 'role',
-        message: 'What is your role? (Check one)',
-        choices: ['Manager', 'Engineer', 'Intern']
-    },
-    {
         type: 'input',
         name: 'email',
         message: 'What is your email address?',
@@ -26,6 +20,19 @@ inquirer.prompt([
         message: 'What is your employee id?',
     },
     {
+        type: 'checkbox',
+        name: 'role',
+        message: 'What is your role? (Check one)',
+        choices: ['Manager', 'Engineer', 'Intern']
+    },
+    // if they choose Manager, ask them the following question:
+    // message: 'What is your office number?',
+      // if they choose Engineer, ask them the following questions:
+    //   message: 'What is your github username?',
+    //   message: 'What is your github profile?',
+      // if they choose Intern, ask them the following question:
+    //   message: 'What school did you graduate from?',
+    {
         type: 'input',
         name: 'officeNumber',
         message: 'What is your office number?',
@@ -34,6 +41,11 @@ inquirer.prompt([
         type: 'input',
         name: 'github',
         message: 'What is your github username?',
+    }, 
+    {
+        type: 'input',
+        name: 'githubprofile',
+        message: 'What is your github profile?',
     }, 
      {
         type: 'input',
@@ -45,7 +57,7 @@ inquirer.prompt([
         console.log(answers)
         let dataInput = generatePage(answers)
         console.log(dataInput)
-        fs.writeFile('index.html', dataInput, err => {
+        fs.writeFile('./dist/index.html', dataInput, err => {
             if (err) {
               console.error(err)
               return
