@@ -57,7 +57,7 @@ inquirer.prompt([
         console.log(answers)
         let dataInput = generatePage(answers)
         console.log(dataInput)
-        fs.writeFile('./dist/index.html', dataInput, err => {
+        fs.writeFile('./src/page-template', dataInput, err => {
             if (err) {
               console.error(err)
               return
