@@ -1,21 +1,16 @@
-const employee = require('../lib/Employee');
+const Employee = require('../lib/Employee');
 
-jest.mock('../lib/Employee');
-
-console.log(new Employee());
+// console.log(new Employee());
 
 
-test('creates an employee object', () => {
-    const Employee = new Employee('employee name');
-    console.log(new Employee);
+test.only('creates an employee object', () => {
+    const MyEmployee = new Employee('employee name', 'employee email', 'employee id');
+    // console.log(MyEmployee);
 
-    expect(employee.name).toBe('name');
-    expect(employee.role).toBe('role');
-    expect(employee.email).toBe('email');
-    expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.contact).toEqual(expect.any(Number));
-    expect(employee.username).toBe('username');
-    expect(employee.school).toBe('school');
+    expect(MyEmployee.getName()).toBe('employee name');
+    expect(MyEmployee.getRole()).toBe('Employee');
+    expect(MyEmployee.getEmail()).toBe('employee email');
+    expect(MyEmployee.getId()).toEqual('employee id');
 }
     // expect(intern.extension).toEqual(
     //     expect.arrayContaining([expect.any(Object)])

@@ -1,20 +1,15 @@
 const Intern = require('../lib/Intern');
 
-jest.mock('../lib/Intern');
-
-console.log(new Intern());
 
 
 test('confirms intern info is correct', () => {
-    // const Manager = new Employee('');
+    const MyIntern = new Intern('name', 'email', 'id', 'school');
 
-    expect(intern.name).toBe('name');
-    expect(intern.role).toBe('role');
-    expect(intern.email).toBe('email');
-    expect(intern.id).toEqual(expect.any(Number));
-    expect(intern.contact).toEqual(expect.any(Number));
-    expect(intern.username).toBe('username');
-    expect(intern.school).toBe('school');
+    expect(MyIntern.getName()).toBe('name');
+    expect(MyIntern.getRole()).toBe('Intern');
+    expect(MyIntern.getEmail()).toBe('email');
+    expect(MyIntern.getId()).toEqual('id');
+    expect(MyIntern.getSchool()).toBe('school');
 }
     // expect(manager.extension).toEqual(
     //     expect.arrayContaining([expect.any(Object)])

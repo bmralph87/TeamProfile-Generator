@@ -1,22 +1,15 @@
 const Manager = require('../lib/Manager');
 
-jest.mock('../lib/Manager');
-
-console.log(new Manager());
-
-
 
 
 test('confirms manager info is correct', () => {
-    // const Manager = new Employee('');
+    const MyManager = new Manager('name', 'email', 'id', 'officeNumber');
 
-    expect(manager.name).toBe('name');
-    expect(manager.role).toBe('role');
-    expect(manager.email).toBe('email');
-    expect(manager.id).toEqual(expect.any(Number));
-    expect(manager.contact).toEqual(expect.any(Number));
-    expect(manager.username).toBe('username');
-    expect(manager.school).toBe('school');
+    expect(MyManager.getName()).toBe('name');
+    expect(MyManager.getRole()).toBe('Manager');
+    expect(MyManager.getEmail()).toBe('email');
+    expect(MyManager.getId()).toEqual('id');
+    expect(MyManager.getOfficeNumber()).toEqual('officeNumber');
 }
     // expect(manager.extension).toEqual(
     //     expect.arrayContaining([expect.any(Object)])
