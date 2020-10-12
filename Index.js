@@ -1,21 +1,32 @@
 // const math = require('math');
 const inquirer = require('inquirer');
-const { writeFile, copyFile } = require('./src/page-template');
-const generatePage = require('./src/page-template');
+// const { writeFile, copyFile } = require('./src/page-template');
+const generatePage = require('./src/page-template')
 const fs = require('fs');
 
-//configurable vars:
+const Manager = require("./lib/Manager")
+const Engineer = require("./lib/Engineer")
+const Intern = require("./lib/Intern")
 
+// console.log(Manager, Engineer, Intern)
+
+//configurable vars:
+//these two variables create strings of text that we are passing
 const fName = "Index";
-const pTitle = "My Team";
+
+const pTitle = "Meet The Pom Tech Team";
+// console.log(pTitle)
+
+const teamArray = [];
+// console.log(teamArray)
 
 function is_Numeric(num) {
     return !isNaN(parseFloat(num)) && isFinite(num);
 }
 
 const promptUser = teamData => {
-    if (!teamData.members) {
-        teamData.members = [];
+    if (!teamData) {
+        teamData = [];
     }
 
     return inquirer.prompt([
@@ -64,10 +75,10 @@ const promptUser = teamData => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'role',
             message: 'What is your role? (Check one)',
-            choices: ['Employee', 'Manager', 'Engineer', 'Intern']
+            choices: ['Manager', 'Engineer', 'Intern']
         },
 
         // make function for each position
@@ -141,37 +152,26 @@ const promptUser = teamData => {
         {
             type: 'confirm',
             name: 'confirmAddEmp',
-            message: 'Would you like to enter another employee?',
+            message: 'Are you the team manager? If so, would you like to enter another employee?',
             default: false
         }
 
     ]).then(empData => {
-        teamData.members.push(empData);
-        if (empData.confirmAddEmp) {
-            return promptUser(teamData);
-        } else {
-            return teamData;
+        if (empData.role === "Manager") {
+            const manager = new Manager(empData.name, empData.id, empData.email, empData.officeNumber)
+            teamData.push(manager)
+        } else if (empData.role === "Engineer") {
+            const engineer = new Engineer(empData.name, empData.id, empData.email, empData.github, empData.githubprofile)
+            teamData.push(engineer)
+        } else if (empData.role === "Intern") {
+            const intern = new Intern(empData.name, empData.id, empData.email, empData.school)
+            teamData.push(intern)
+        } if (empData.confirmAddEmp) {
+            return promptUser(teamData)
         }
+        return teamData;
     });
 };
-
-// {
-//     type: 'input',
-//     name: 'github',
-//     message: 'What is your github username?',
-// }, 
-// {
-//     type: 'input',
-//     name: 'githubprofile',
-//     message: 'What is your github profile?',
-// }, 
-//  {
-//     type: 'input',
-//     name: 'school',
-//     message: 'What school did you graduate from?',
-// },  
-
-
 function writeToFile(fileName, data) {
     //data=mockData; // testing only
     fs.writeFile('dist/' + fileName + '.html', data, err => {
@@ -183,37 +183,24 @@ function writeToFile(fileName, data) {
     }
     )
 };
-
 // function to initialize program
 function init() {
-    promptUser({})
-        .then(data => {
-            return Promise.resolve([data, generatePage(pTitle, data)]);
+    
+    promptUser()
+        .then(teamData => {
+            console.log(teamData)
+            return Promise.resolve([teamData, generatePage(teamData)]);
         })
-        .then(data => { writeToFile(fName, data[1]) })
-        .catch(err => {writeFile
+        .then(teamData => { writeToFile(fName, teamData) })
+        .catch(err => {
+            // writeFile
             console.log(err);
         });
 }
-//function call to initialize program
+// function call to initialize program
 init();
 
 
 
-// // ])
-// //     .then(answers => {
-// //         console.log(answers)
-// //         let dataInput = generatePage(answers)
-// //         console.log(dataInput)
-// //         fs.writeFile('./src/page-template', dataInput, err => {
-// //             if (err) {
-// //               console.error(err)
-// //               return
-// //             }
-// //             //file written successfully
-// //           })
-// //     })
 
-//     .catch(err => {
-//         console.log(err)
-//     })
+
