@@ -38,4 +38,6 @@ TeamProfile-Generator is a Node.js command-line application that summarizes, nam
 [Jest](https://jestjs.io/)
 [OOP](https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/)
 
+## Honorable Mention:
+
 Shout out to George Yoo, Lucianne Vazquez and Tom Chestnut for all of their help!! 😁
