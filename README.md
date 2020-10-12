@@ -24,7 +24,7 @@ This project was created as an assignment for the PennLPS/TES Fullstack Bootcamp
 ## Description/Usage: 
 TeamProfile-Generator is a Node.js command-line application that summarizes, names, roles and general info for a fictional doftware engineerign team
 
-### The screen recording file can be found here: <iframe src="https://drive.google.com/file/d/16Lfkn2wr2l2usqA4B6OPPBZIJShgt10Q/preview" width="640" height="480"></iframe>
+### The screen recording file can be found here: <iframe src="https://drive.google.com/file/d/1mz8c5Ebje0QzckdLQGoqTgnjVLTQ5Hhq/preview" width="640" height="480"></iframe>
 
 #### My repo can be found [Here](https://github.com/bmralph87/TeamProfile-Generator)
 
