@@ -1,7 +1,7 @@
  TeamProfile-Generator
 This project was created as an assignment for the PennLPS/TES Fullstack Bootcamp.
 
-<img src = "Develop/images/Screen Shot 2020-10-04 at 4.31.01 PM copy.jpg"> 
+<img src = "src/Screen Shot 2020-10-11 at 9.43.53 PM copy.jpg"> 
 
 ## Tools used for this project
 - JavaScript
