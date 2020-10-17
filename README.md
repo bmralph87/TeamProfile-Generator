@@ -1,4 +1,5 @@
- TeamProfile-Generator
+# TeamProfile-Generator
+
 This project was created as an assignment for the PennLPS/TES Fullstack Bootcamp.
 
 <img src = "src/Screen Shot 2020-10-11 at 9.43.53 PM copy.jpg"> 
@@ -22,21 +23,25 @@ This project was created as an assignment for the PennLPS/TES Fullstack Bootcamp
 
 
 ## Description/Usage: 
-TeamProfile-Generator is a Node.js command-line application that summarizes, names, roles and general info for a fictional doftware engineerign team
+TeamProfile-Generator is a Node.js command-line application that summarizes, names, roles and general info for a fictional doftware engineering team
 
 ### The screen recording file can be found here: <iframe src="https://drive.google.com/file/d/1mz8c5Ebje0QzckdLQGoqTgnjVLTQ5Hhq/preview" width="640" height="480"></iframe>
+
 
 #### My repo can be found [Here](https://github.com/bmralph87/TeamProfile-Generator)
 
 
 ## Sites used for Knowledge:
 
-[Node Installation](https://nodejs.org/en/download/package-manager/)
-[Heroku](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-[Express](https://expressjs.com/en/4x/api.html)
-[Uninstalling Packages and Dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies)
-[Express Installation](https://www.npmjs.com/package/express)
+[Installation](https://www.npmjs.com/package/inquirer#installation)
+[npm package](https://www.npmjs.com/package/inquirer)
+[Inquirer examples](https://www.npmjs.com/package/inquirer#examples)
+[WriteFile](https://stackabuse.com/writing-to-files-in-node-js/)
+[Jest](https://jestjs.io/)
+[OOP](https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/)
 
 ## Honorable Mention:
 
-Shout out to Debra Sparr, George Yoo and Lucianne Vazquez for all of their help!! 😁
+Shout out to George Yoo, Lucianne Vazquez and Tom Chestnut for all of their help!! 😁
+
+
