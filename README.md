@@ -31,13 +31,12 @@ TeamProfile-Generator is a Node.js command-line application that summarizes, nam
 
 ## Sites used for Knowledge:
 
-[Installation](https://www.npmjs.com/package/inquirer#installation)
-[npm package](https://www.npmjs.com/package/inquirer)
-[Inquirer examples](https://www.npmjs.com/package/inquirer#examples)
-[WriteFile](https://stackabuse.com/writing-to-files-in-node-js/)
-[Jest](https://jestjs.io/)
-[OOP](https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/)
+[Node Installation](https://nodejs.org/en/download/package-manager/)
+[Heroku](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+[Express](https://expressjs.com/en/4x/api.html)
+[Uninstalling Packages and Dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies)
+[Express Installation](https://www.npmjs.com/package/express)
 
 ## Honorable Mention:
 
-Shout out to George Yoo, Lucianne Vazquez and Tom Chestnut for all of their help!! 😁
+Shout out to Debra Sparr, George Yoo and Lucianne Vazquez for all of their help!! 😁
