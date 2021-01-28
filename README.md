@@ -34,14 +34,18 @@ TeamProfile-Generator is a Node.js command-line application that summarizes, nam
 ## Sites used for Knowledge:
 
 [Installation](https://www.npmjs.com/package/inquirer#installation)
+
 [npm package](https://www.npmjs.com/package/inquirer)
+
 [Inquirer examples](https://www.npmjs.com/package/inquirer#examples)
+
 [WriteFile](https://stackabuse.com/writing-to-files-in-node-js/)
+
 [Jest](https://jestjs.io/)
+
 [OOP](https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/)
 
-## Honorable Mention:
 
-Shout out to George Yoo, Lucianne Vazquez and Tom Chestnut for all of their help!! 😁
+
 
 
